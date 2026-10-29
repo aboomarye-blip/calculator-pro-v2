@@ -1,4 +1,5 @@
-customtkinter
-numpy
-matplotlib
-sympy
+customtkinter>=5.2
+sympy>=1.12
+numpy>=1.26
+matplotlib>=3.8
+
