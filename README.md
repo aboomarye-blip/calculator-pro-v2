@@ -1,45 +1,44 @@
-# Calculator Pro
+# Calculator Pro V2.2
 
-A desktop scientific calculator built with Python and CustomTkinter. It combines everyday calculations with symbolic mathematics, graph plotting, unit conversion, and configurable currency conversion in a dark-themed interface.
+A desktop scientific and engineering calculator built with Python and CustomTkinter. The application includes scientific calculations, equation solving, symbolic differentiation and integration, function plotting, currency conversion, unit conversion, calculation history, and memory controls.
 
-**الحاسبة الاحترافية** تطبيق سطح مكتب مبني بلغة Python، يجمع بين العمليات الحسابية والرياضيات الرمزية ورسم الدوال وتحويل الوحدات والعملات، ضمن واجهة داكنة.
+**الحاسبة الاحترافية** تطبيق سطح مكتب بلغة Python بواجهة عربية/إنجليزية، ويجمع بين العمليات العلمية ورسم الدوال والتفاضل والتكامل وتحويل العملات والوحدات.
 
 ## Features
 
-- **Scientific calculations** using SymPy, including expressions such as `sin(`, `cos(`, `tan(`, `log(`, `sqrt(`, powers (`^`), and parentheses.
-- **Equation solving** for expressions written as an equation with `=`.
-- **Symbolic differentiation** with the `diff` button.
-- **Symbolic integration** with the `∫` button.
-- **Function plotting** over an x-range from -10 to 10 using Matplotlib.
-- **Unit conversion** for length, weight, and selected temperature conversions.
-- **Currency conversion** using editable exchange-rate values.
-- **Calculation history** and memory controls (`MC`, `MR`, `M+`, `M-`).
-- **Keyboard support** for numbers, basic operators, Enter, Backspace, and Escape.
+- Scientific calculations with a restricted expression parser.
+- Equation solving for equations containing `x`.
+- Symbolic differentiation and integration using SymPy.
+- Function plotting with NumPy and Matplotlib.
+- Currency conversion for USD, SAR, YER, QAR, EUR, and GBP.
+- Manual exchange-rate editing and online reference-rate refresh through Frankfurter.
+- Length, weight, and temperature conversion.
+- Calculation history, memory controls, keyboard shortcuts, and context help.
+- Persistent exchange-rate settings stored in the user's application data directory.
 
 ## Requirements
 
-- Python 3.10 or later recommended
-- `customtkinter`
-- `numpy`
-- `matplotlib`
-- `sympy`
+- Python 3.10 or newer
+- Windows or another desktop environment with Tk support
+
+Dependencies are listed in [requirements.txt](requirements.txt).
 
 ## Installation
 
-1. Install Python from [python.org](https://www.python.org/downloads/) if it is not already installed.
-2. Clone the repository:
+1. Install Python from [python.org](https://www.python.org/downloads/).
+2. Clone this repository:
 
    ```bash
    git clone https://github.com/aboomarye-blip/calculator-pro-v2.git
    cd calculator-pro-v2
    ```
 
-3. (Recommended) Create and activate a virtual environment:
+3. Create and activate a virtual environment (recommended):
 
-   **Windows**
+   **Windows PowerShell**
    ```powershell
    py -m venv .venv
-   .venv\\Scripts\\Activate.ps1
+   .\.venv\Scripts\Activate.ps1
    ```
 
    **macOS / Linux**
@@ -48,57 +47,41 @@ A desktop scientific calculator built with Python and CustomTkinter. It combines
    source .venv/bin/activate
    ```
 
-4. Install the dependencies:
+4. Install dependencies:
 
    ```bash
-   python -m pip install customtkinter numpy matplotlib sympy
+   python -m pip install -r requirements.txt
    ```
 
-5. Run the application:
+5. Run Calculator Pro V2.2:
 
    ```bash
-   python calculator_pro.py
+   python calculator_pro_v2.2.py
    ```
 
-## Usage notes
+## Exchange-rate note
 
-- Enter an expression and press **=** or **Enter** to calculate it.
-- Use the **Graph**, **diff**, and **∫** buttons for plotting, differentiation, and integration.
-- Select source and target units or currencies in the dropdown menus before converting the value shown in the display.
-- Currency rates are example values stored in the source code; they are **not live market rates**. Use **Edit Exchange Rates** to update them before relying on conversions.
-- The graphing and desktop interface require a graphical desktop session.
+The built-in rates are approximate defaults. The application can retrieve reference rates from Frankfurter when internet access is available, and it allows manual editing. These are reference rates, not real-time bank buy/sell quotations. Verify rates before financial use.
 
-## Project status
+## Project files
 
-This is an early-stage project. Features and behavior may change as the project develops. Please test calculations and conversion values before using them for important work.
+- `calculator_pro_v2.2.py` — application source
+- `requirements.txt` — Python dependencies
+- `.gitignore` — common local files excluded from version control
+
+## العربية
+
+### التشغيل
+بعد تثبيت Python، نفّذ:
+
+```bash
+python -m pip install -r requirements.txt
+python calculator_pro_v2.2.py
+```
+
+### ملاحظة أسعار الصرف
+الأسعار الافتراضية تقريبية. يمكن تحديث الأسعار المرجعية عبر الإنترنت أو تعديلها يدويًا. لا تمثل هذه الأسعار عروض بيع وشراء مصرفية لحظية؛ تحقّق منها قبل استخدامها في المعاملات المالية.
 
 ## Author
 
-**Abdullah Mahyoub**
-
-## Repository
-
-https://github.com/aboomarye-blip/calculator-pro-v2
-
----
-
-# الحاسبة الاحترافية
-
-### المميزات
-- العمليات الحسابية والدوال العلمية.
-- حل المعادلات الرياضية.
-- التفاضل والتكامل الرمزي.
-- رسم الدوال البيانية.
-- تحويل وحدات الطول والوزن وبعض وحدات الحرارة.
-- تحويل العملات مع إمكانية تعديل أسعار الصرف.
-- سجل العمليات وذاكرة الآلة الحاسبة.
-
-### التشغيل
-بعد تثبيت Python والمكتبات المطلوبة، نفّذ:
-
-```bash
-python -m pip install customtkinter numpy matplotlib sympy
-python calculator_pro.py
-```
-
-**تنبيه:** أسعار العملات الافتراضية داخل البرنامج ليست أسعارًا مباشرة أو محدثة تلقائيًا. يرجى تحديثها يدويًا قبل استخدامها.
+Abdullah Mahyoub
